@@ -227,8 +227,9 @@ public class AverageReducer extends Reducer<Text, Text, Text, Text> {
 		if (distance < 200) return;
 		int speed = (int) (distance/(time/3600.0));
 		if (speed > 1100) return;
-		if ((distance < 1000)&&(speed < 330)) return;
-		if ((distance < 4000)&&(speed < 600)) return;
+		if ((distance < 2000)&&(speed < 330)) return;
+		if ((distance < 4000)&&(speed < 500)) return;
+		else if ((distance > 3999)&& (speed < 600))return;
 		
 		
 	   
